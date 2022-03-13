@@ -244,6 +244,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	bottom: 15px;
 	z-index: 50;
 	visibility: hidden;
+	background-color: rgba(255, 255, 255, 0.6);
 	&:hover {
 		bottom: 25px;
 	}
@@ -486,7 +487,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 			.jq-selectbox__select {
 				border: 1px solid $teal;
 				background-color: $wh;
-				color: #384450;
+				&-text {
+					color: #384450;
+				}
 			}
 		}
 		&__dropdown {
@@ -522,12 +525,16 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 			border: 1px solid $gray2;
 			transition: all .2s linear;
 			&::placeholder {
+				color: $dgray;
 				opacity: 1;
 			}
 			&:focus {
 				border: 1px solid $teal;
 				background-color: $wh;
 				color: #384450;
+				&::placeholder {
+					color: #384450;
+				}
 			}
 		}
 		&-select {
@@ -1275,10 +1282,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 @media(max-width: 1400px) {
-	.arrow-up {
-		position: absolute;
-		top: calc(100% - 50px);
-	}
 	.whom {
 		&:before {
 			width: 450px;
@@ -1549,6 +1552,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 @media(max-width: 766px) {
+	/*.arrow-up {
+		position: absolute;
+		top: calc(100% - 50px);
+	}*/
 	.about {
 		&-card {
 			padding: 18px 25px;

@@ -317,7 +317,8 @@ h1, h2, h3, h4, h5, h6 {
   right: 60px;
   bottom: 15px;
   z-index: 50;
-  visibility: hidden; }
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.6); }
   .arrow-up:hover {
     bottom: 25px; }
   .arrow-up.fixed {
@@ -545,8 +546,9 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateY(-50%); }
     .form-registration .jq-selectbox.dropdown .jq-selectbox__select {
       border: 1px solid #077F83;
-      background-color: #fff;
-      color: #384450; }
+      background-color: #fff; }
+      .form-registration .jq-selectbox.dropdown .jq-selectbox__select-text {
+        color: #384450; }
     .form-registration .jq-selectbox__dropdown {
       top: calc(100% + 1px) !important;
       bottom: auto !important; }
@@ -581,17 +583,29 @@ h1, h2, h3, h4, h5, h6 {
       -o-transition: all .2s linear;
       transition: all .2s linear; }
       .form-registration__item input::-webkit-input-placeholder, .form-registration__item select::-webkit-input-placeholder {
+        color: #758799;
         opacity: 1; }
       .form-registration__item input:-ms-input-placeholder, .form-registration__item select:-ms-input-placeholder {
+        color: #758799;
         opacity: 1; }
       .form-registration__item input::-ms-input-placeholder, .form-registration__item select::-ms-input-placeholder {
+        color: #758799;
         opacity: 1; }
       .form-registration__item input::placeholder, .form-registration__item select::placeholder {
+        color: #758799;
         opacity: 1; }
       .form-registration__item input:focus, .form-registration__item select:focus {
         border: 1px solid #077F83;
         background-color: #fff;
         color: #384450; }
+        .form-registration__item input:focus::-webkit-input-placeholder, .form-registration__item select:focus::-webkit-input-placeholder {
+          color: #384450; }
+        .form-registration__item input:focus:-ms-input-placeholder, .form-registration__item select:focus:-ms-input-placeholder {
+          color: #384450; }
+        .form-registration__item input:focus::-ms-input-placeholder, .form-registration__item select:focus::-ms-input-placeholder {
+          color: #384450; }
+        .form-registration__item input:focus::placeholder, .form-registration__item select:focus::placeholder {
+          color: #384450; }
     .form-registration__item-select {
       position: relative; }
       .form-registration__item-select select {
@@ -1252,9 +1266,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px; } }
 
 @media (max-width: 1400px) {
-  .arrow-up {
-    position: absolute;
-    top: calc(100% - 50px); }
   .whom:before {
     width: 450px;
     height: 455px;
@@ -1440,6 +1451,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px; } }
 
 @media (max-width: 766px) {
+  /*.arrow-up {
+		position: absolute;
+		top: calc(100% - 50px);
+	}*/
   .about-card {
     padding: 18px 25px; }
     .about-card__title {
